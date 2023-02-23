@@ -12,7 +12,7 @@ def hello_world(
 ):  # this is the home page function that generates the page code
     return "Hello world!"
 
-@app.route('/', methods=['GET','POST'])
+@app.route('/', methods=['POST'])
 async def webhook():
     try:
         req = request.get_json(silent=True, force=True)
